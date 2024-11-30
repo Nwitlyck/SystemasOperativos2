@@ -1,0 +1,49 @@
+Alumno
+    Alberto Segura Abarca   
+    
+Curso
+    Sistemas Operativos II
+
+Tema
+    Balancear cargas de aplicaciones web en contenedores
+
+Objetivo General
+    Implementar un sistema de balanceo de carga utilizando NGINX para 
+    aplicaciones web desplegadas en contenedores Docker, 
+    con el fin de mejorar la disponibilidad, 
+    escalabilidad y rendimiento de la aplicación.
+
+Objetivos Específicos
+    Configurar un set de contenedores Docker y desplegar múltiples 
+    instancias de contenedores Docker para alojar
+    una simple aplicación web y facilitar la 
+    distribución de la carga entre ellas.
+
+    Implementar NGINX como balanceador de carga, 
+    distribuyendo el tráfico de manera equitativa 
+    entre las instancias de contenedores Docker, 
+    garantizando así una alta disponibilidad y 
+    eficiencia en la gestión del tráfico.
+
+    Descubrir el efecto que este proceso tiene 
+    en recusos ademas del rendimiento 
+    de la applicacion web en su uso.
+
+Plan de trabajo
+    Indagar como instala NGINX, se configura y que metricas puedo sacar
+    Crear la web app
+    Ver como puedo hacer las imagenes de docker para web app y lansar 3 contenedores con esas imagenes
+    Configurar el NGINX para que se encarge del balanceo de los contenedores con la web app
+    Hacer pruevas y analisar los resultados
+
+Metodologia
+    El enfoque quedeseo tomar para la investigación de este proyecto seria mas experimental o practica esta metodología facilitará la realización de pruebas experimentales en las que se modifican variables, como la cantidad de contenedores Docker y la configuración de NGINX para evaluar el rendimiento y escalabilidad de una aplicación web mediante la recopilación de datos objetivos, como los tiempos de respuesta, la utilización de recursos y la distribución de carga.
+
+Recursos o Herramientas
+    Documentacion de docker y NGINX
+    Virtual machine con ubuntu
+    Docker y NGINX
+    Web App
+
+
+Anadir info del iEEE 
