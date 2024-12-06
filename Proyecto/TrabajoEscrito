@@ -14,20 +14,13 @@ Objetivo General
     escalabilidad y rendimiento de la aplicación.
 
 Objetivos Específicos
-    Configurar un set de contenedores Docker y desplegar múltiples 
-    instancias de contenedores Docker para alojar
-    una simple aplicación web y facilitar la 
-    distribución de la carga entre ellas.
+    Configurar un set de contenedores Docker y desplegar múltiples instancias de contenedores 
+    Docker para alojaruna simple aplicación web y facilitar la distribución de la carga entre ellas.
 
-    Implementar NGINX como balanceador de carga, 
-    distribuyendo el tráfico de manera equitativa 
-    entre las instancias de contenedores Docker, 
-    garantizando así una alta disponibilidad y 
-    eficiencia en la gestión del tráfico.
+    Implementar NGINX como balanceador de carga, distribuyendo el tráfico de manera equitativa entre las instancias de contenedores Docker, 
+    garantizando así una alta disponibilidad y eficiencia en la gestión del tráfico.
 
-    Descubrir el efecto que este proceso tiene 
-    en recusos ademas del rendimiento 
-    de la applicacion web en su uso.
+    Descubrir el efecto que este proceso tiene en recusos ademas del rendimiento de la applicacion web en su uso.
 
 Plan de trabajo
     Indagar como instala NGINX, se configura y que metricas puedo sacar
@@ -45,5 +38,71 @@ Recursos o Herramientas
     Docker y NGINX
     Web App
 
+Marco teotico
+    La computación en la nube ha transformado de manera significativa el panorama de la tecnología de la información, permitiendo a las organizaciones acceder a recursos informáticos de manera flexible y escalable, aunque el concepto de nube tiene sus raíces en la década de 1960, su adopción masiva se consolidó en 2006 con el lanzamiento de Amazon Elastic Compute Cloud (EC2), esta evolución ha permitido a las empresas mover sus gastos de capital (CAPEX) a gastos operativos (OPEX), utilizando un modelo de pago por uso que optimiza tanto la infraestructura como la accesibilidad, a medida que los servicios en la nube se han diversificado, han surgido diferentes modelos de implementación, como la nube pública, privada, híbrida, comunitaria y la computación en el borde, cada uno con sus propias ventajas y desafíos, la adopción de arquitecturas nativas en la nube, como los microservicios y el uso de contenedores orquestados por Kubernetes, ha revolucionado la manera en que las aplicaciones son diseñadas, implementadas y gestionadas, brindando una mayor eficiencia y escalabilidad en los entornos modernos de TI.
 
-Anadir info del iEEE 
+    Nginx:
+        Es una solución de balanceo de carga dinámico
+        Con el ráp`ido crecimiento del uso de Internet y el aumento exponencial de los datos, las demandas sobre los servidores han crecido considerablemente Esto genera la necesidad de manejar un alto nivel de concurrencia y grandes cantidades de datos mientras se garantiza un rendimiento óptimo Aquí es donde Nginx, un servidor de código abierto, liviano y de alto rendimiento, ha emergido como una solución ideal
+
+        Es ampliamente utilizado no solo como servidor web, sino también como balanceador de carga debido a su capacidad para manejar altos niveles de tráfico de red Los algoritmos de balanceo de carga en Nginx distribuyen dinámicamente las solicitudes entre múltiples nodos según la carga actual, mejorando así la fiabilidad y reduciendo el riesgo de fallos en puntos únicos
+
+        Avances en balanceo de carga dinámico
+        El balanceo de carga en Nginx permite ajustar dinámicamente las asignaciones de peso para cada servidor basándose en su rendimiento en tiempo real Este enfoque no solo optimiza el uso de los recursos del sistema, sino que también mejora significativamente la experiencia del usuario final al minimizar el tiempo de respuesta
+
+        Además, diversos estudios han propuesto estrategias avanzadas basadas en Nginx para mejorar aún más la escalabilidad y fiabilidad de las redes Estas incluyen mecanismos de selección de nodos, métodos de migración y algoritmos optimizados para infraestructuras modernas como SDN (Redes Definidas por Software)`
+
+    Docker y su Uso en Aplicaciones Web
+
+        Docker es una plataforma de virtualización que permite a los desarrolladores empaquetar aplicaciones junto con todas sus dependencias en contenedores ligeros y portables Los contenedores Docker garantizan que el software funcione de manera consistente independientemente del entorno donde se ejecute ya sea en la máquina del desarrollador un servidor de pruebas o un entorno de producción
+
+    Beneficios para Aplicaciones Web
+        Portabilidad Los contenedores Docker incluyen todo lo necesario para ejecutar una aplicación como código bibliotecas y dependencias Esto asegura que las aplicaciones puedan moverse sin problemas entre entornos sin problemas de compatibilidad. Escalabilidad Docker simplifica la escalabilidad horizontal al permitir el despliegue de múltiples instancias de la misma aplicación rápidamente Esto es especialmente útil para aplicaciones web que necesitan manejar un gran volumen de usuarios simultáneamente. Aislamiento Cada contenedor opera de forma independiente lo que minimiza los conflictos entre aplicaciones o servicios en un mismo servidor. Integración Continua Docker facilita la integración y entrega continua al permitir que los equipos desarrollen prueben y desplieguen aplicaciones rápidamente en cualquier entorno
+
+    Caso Práctico en Desarrollo Web
+        En el desarrollo de aplicaciones web como dashboards para la gestión de desastres Docker puede ser una herramienta invaluable Según el archivo proporcionado se ha evaluado el rendimiento de contenedores Docker para este propósito Los resultados indican que Docker no solo facilita la configuración y despliegue de la infraestructura de la aplicación sino que también puede mejorar el rendimiento general en términos de tiempo de respuesta y gestión de recursos
+
+    Flujo de Trabajo Típico
+        Desarrollo Los desarrolladores crean y prueban la aplicación en contenedores locales
+        Pruebas Los contenedores se despliegan en un entorno de prueba donde el equipo verifica su funcionalidad
+        Producción Los mismos contenedores se ejecutan en servidores de producción garantizando consistencia y estabilidad
+
+    Docker y su Uso en Aplicaciones Web con Nginx
+        Docker se ha convertido en una herramienta esencial en el desarrollo y despliegue de aplicaciones web modernas debido a su capacidad para empaquetar aplicaciones junto con todas sus dependencias en contenedores portables y ligeros Estos contenedores aseguran que las aplicaciones se ejecuten de manera consistente independientemente del entorno y simplifican el proceso de desarrollo pruebas y despliegue Cuando se combina con Nginx Docker potencia aún más la rapidez confiabilidad y eficiencia de las aplicaciones web
+
+    Nginx el Aliado Ideal en Entornos Dockerizados
+        Nginx es uno de los servidores web y proxies inversos más populares y eficaces conocido por su capacidad de manejar altas tasas de solicitudes simultáneas Al integrarse con Docker Nginx permite construir arquitecturas escalables y flexibles para aplicaciones web modernas Por ejemplo las aplicaciones pueden estar alojadas en múltiples contenedores Docker mientras que Nginx actúa como balanceador de carga distribuyendo el tráfico entre ellos de manera uniforme Esto no solo mejora la escalabilidad sino que también garantiza una experiencia de usuario más confiable
+
+    Beneficios Clave de Docker con Nginx
+        -Rendimiento Mejorado Docker y Nginx trabajan juntos para maximizar el uso de recursos del servidor Nginx maneja solicitudes HTTP de manera eficiente mientras que Docker aísla cada instancia de la aplicación evitando conflictos entre servicios
+
+        -Despliegue Consistente Con Docker el servidor Nginx se puede empaquetar junto con la aplicación garantizando que la configuración sea idéntica en todos los entornos Esto elimina problemas típicos como funciona en mi máquina pero no en el servidor
+
+        -Escalabilidad Horizontal Nginx en contenedores Docker permite implementar y gestionar múltiples instancias de aplicaciones fácilmente equilibrando la carga entre ellas para manejar picos de tráfico sin interrupciones
+
+        -Facilidad de Actualización Usando Docker Nginx puede ser actualizado o modificado sin afectar el resto del sistema gracias al enfoque modular de los contenedores
+
+Conclusion
+    Docker combinado con Nginx es una combinación poderosa para aplicaciones web modernas Juntos ofrecen un entorno robusto flexible y eficiente que satisface las demandas de rendimiento y escalabilidad de las aplicaciones actuales La integración de Docker y Nginx no solo acelera los ciclos de desarrollo sino que también mejora la confiabilidad del despliegue brindando una solución completa para desarrolladores y administradores de sistemas
+
+Bibligrafia
+    Kubernetes- Based Load Balancer as a Service for Private Cloud Infrastructures
+    https://ieeexplore.ieee.org/document/9817323/
+
+    Research on Nginx Dynamic Load Balancing Algorithm
+    https://ieeexplore.ieee.org/document/9050210/
+
+    Learn Docker in a Month of Lunches
+    https://ieeexplore.ieee.org/document/10280501/
+
+    Docker in Action, Second Edition
+    https://ieeexplore.ieee.org/document/10280323/
+
+    Performance Evaluation of Docker-based Apache and Nginx Web Server
+    https://ieeexplore.ieee.org/document/9824303/
+
+    Round-robin Algorithm in HAProxy and Nginx Load Balancing Performance Evaluation: a Review
+    https://ieeexplore.ieee.org/document/8864455/
+
+    Performance Evaluation of Docker Containers for Disaster Management Dashboard Web Application
+    https://ieeexplore.ieee.org/document/10242411/
